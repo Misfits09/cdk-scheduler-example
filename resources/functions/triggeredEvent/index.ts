@@ -6,6 +6,7 @@ export const handler = (event: any) => {
     console.error("The event had no (or empty) `Records` array");
   event.Records.forEach((record: any) => {
     try {
+      // Parse the event data
       const body = JSON.parse(record?.body);
       console.info(
         `The following event should have been dispatched at ${dateToTimeString(

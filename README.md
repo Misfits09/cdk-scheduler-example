@@ -1,14 +1,22 @@
-# Welcome to your CDK TypeScript project
+# CDK-Scheduler Example projet
 
-This is a blank project for CDK development with TypeScript.
+This is an example project to demonstrate the usage of the `cdk-scheduler` package
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Installation
 
-## Useful commands
+- Clone this project locally and make sure you have the aws cli installed and configured on your machine
+- Install all dependencies by running `npm install`
+- Deploy the project by typing `npx cdk deploy --profile=<profile-name>`
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+## Usage
+
+With the url provided by the cdk cli when you have deployed the stack you can add a new message with a GET request having the following URL :
+`https://<base-url>/?message=Hello%20World!&minutes=20`
+
+You should get the `Completed` output.
+
+## Presentation
+
+- In the `bin/` folder you can find the declaration of the CDK App and the instantiation of the Stack
+- In the `lib/` folder you can find the declaration of the Scheduler Stack using the actual cdk-scheduler package
+- In the `resources/functions/` folder you can find the handlers for both lambda functions used in the Scheduler Stack

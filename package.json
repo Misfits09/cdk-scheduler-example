@@ -1,13 +1,10 @@
 {
   "name": "test-sched",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "bin": {
     "test-sched": "bin/test-sched.js"
   },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest",
     "cdk": "cdk"
   },
   "devDependencies": {
